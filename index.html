@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOS EMPRENDEDORES | Gourmet & Delivery</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<nav>
+    <a href="#" class="logo">EMPRENDEDORES<span>.</span></a>
+    <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menu</a>
+        <a href="#pago">Pagar</a>
+        <a href="#contacto">Contacto</a>    </div>
+</nav>
+<section class="hero" id="inicio">
+    <div class="hero-text">
+        <h1>Sabor <span>Artesanal</span> directo a tu casa.</h1>
+        <p>Disfruta de los mejores bolones y tilapias de la ciudad, preparados con ingredientes frescos y el toque secreto de la casa.</p>
+        <a href="#menu" class="cta-button">Ver el Menu Completo</a>
+    </div>
+    <div class="hero-image"><img src="Captura de pantalla 2026-02-18 073639.png"></div>
+</section>
+
+<section class="menu-section" id="menu">
+    <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; text-align: center;">Nuestro Menu</h2>
+
+    <div class="categorias-bar">
+        <button class="cat-item active" onClick="filtrar('todos', event)"> 🔥Todos</button>
+        <button class="cat-item" onClick="filtrar('bolon', event)"> 🥙Bolones</button>
+        <button class="cat-item" onClick="filtrar('plato', event)">🐟tilapias</button>
+        <button class="cat-item" onClick="filtrar('bebida', event)"> ☕Bebidas</button>
+    </div>
+
+    <div class="grid-productos">
+        
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (4).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon Mixto</h3>
+                <p>Verde majado con chicharron crocante y queso manaba.</p>
+                <span class="card-price">$3.50</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon Mixto', 3.50)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (1).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon de Queso</h3>
+                <p>Masa de verde artesanal con doble porcion de queso criollo.</p>
+                <span class="card-price">$2.50</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon de Queso', 2.50)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (2).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon de Chicharron</h3>
+                <p>Verde autentico con trozos de cerdo crujientes y sazonados.</p>
+                <span class="card-price">$3.00</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon de Chicharron', 3.00)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (3).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon de Maduro</h3>
+                <p>Pltano maduro dulce relleno de abundante queso derretido.</p>
+                <span class="card-price">$2.75</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon de Maduro', 2.75)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+          <div class="card-content">
+                <h3><img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (4).png" width="1672" height="640" class="card-img">Bolon Pinton</h3>
+                <p>Combinacion perfecta de verde y maduro con chicharron.</p>
+                <span class="card-price">$3.25</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon Pinton', 3.25)">+</button>
+          </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (5).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon de Mani</h3>
+                <p>Masa de verde suave con pasta de mani 100% natural.</p>
+                <span class="card-price">$3.00</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon de Mani', 3.00)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (6).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon "El Montubio"</h3>
+                <p>Nuestro bolon mixto tradicional servido con un huevo frito.</p>
+                <span class="card-price">$4.25</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon Montubio', 4.25)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (7).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon con Bistec</h3>
+                <p>Bolon de queso acompañado de un jugoso bistec de carne.</p>
+                <span class="card-price">$5.50</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon con Bistec', 5.50)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (8).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Trio de Minis</h3>
+                <p>Tres mini bolones para probar: Queso, Chicharron y Mixto.</p>
+                <span class="card-price">$6.00</span>
+                <button class="btn-add-menu" onClick="agregar('Trio de Minis', 6.00)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bolon">
+            <img src="../imagenes/Gemini_Generated_Image_pzodrmpzodrmpzod (9).png" width="1672" height="640" class="card-img">
+            <div class="card-content">
+                <h3>Bolon Especial</h3>
+                <p>Basado en salsa cremosa de queso y finas hierbas.</p>
+                <span class="card-price">$4.50</span>
+                <button class="btn-add-menu" onClick="agregar('Bolon Especial', 4.50)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="plato">
+            <img src="Captura de pantalla 2026-02-18 062803.png" class="card-img">
+            <div class="card-content">
+                <h3>Tilapia Frita</h3>
+                <p>Fresca del dia con patacones, arroz y ensalada criolla.</p>
+                <span class="card-price">$8.00</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Frita', 8.00)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="plato">
+            <img src="Gemini_Generated_Image_l91k8fl91k8fl91k.png" class="card-img">
+            <div class="card-content">
+                <h3>Encebollado</h3>
+                <p>Albacora premium, yuca y el toque justo de limon.</p>
+                <span class="card-price">$5.00</span>
+                <button class="btn-add-menu" onClick="agregar('Encebollado', 5.00)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_ropdvqropdvqropd.png" width="1715" height="608" class="card-img">
+            <div class="card-content">
+                <h3>Tilapia al Vapor</h3>
+                <p>Cocinada a fuego lento con finas hierbas y vegetales.</p>
+                <span class="card-price">$9.00</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Vapor', 9.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_ropdvqropdvqropd (3).png" width="1715" height="608" class="card-img">
+            <div class="card-content">
+                <h3>Tilapia Marinera</h3>
+                <p>Filete de tilapia cubierto en una rica salsa de camarones.</p>
+                <span class="card-price">$12.50</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Marinera', 12.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_ropdvqropdvqropd (4).png" width="1715" height="608" class="card-img">
+            <div class="card-content">
+                <h3>Tilapia al Ajillo</h3>
+                <p>Salteada con mantequilla, ajos dorados y vino blanco.</p>
+                <span class="card-price">$10.00</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Ajillo', 10.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_ropdvqropdvqropd (2).png" width="1715" height="608" class="card-img">
+            <div class="card-content">
+                <h3>Tilapia Apanada</h3>
+                <p>Filete crujiente servido con papas fritas y ensalada fresca.</p>
+                <span class="card-price">$8.50</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Apanada', 8.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 18.55.58.jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Ceviche de Tilapia</h3>
+                <p>Pescado fresco marinado en limon, cilantro y cebolla.</p>
+                <span class="card-price">$7.00</span>
+                <button class="btn-add-menu" onClick="agregar('Ceviche Tilapia', 7.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+                
+            <div class="card-content">
+                <h3><img src="../imagenes/Gemini_Generated_Image_o3xpj1o3xpj1o3xp.png" width="1200" height="896" class="card-img">Tilapia a la Brasa</h3>
+                <p>Ahumada a la parrilla, servida con yuca asada y ajo.</p>
+                <span class="card-price">$11.00</span>
+                <button class="btn-add-menu" onClick="agregar('Tilapia Brasa', 11.00)">+</button>
+          </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_95wodi95wodi95wo.png" width="1839" height="576" class="card-img">
+            <div class="card-content">
+                <h3>Sudado de Tilapia</h3>
+                <p>Coccion lenta en jugo de tomate, cebolla y pimientos.</p>
+                <span class="card-price">$9.50</span>
+                <button class="btn-add-menu" onClick="agregar('Sudado Tilapia', 9.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="plato">
+            <img src="../imagenes/Gemini_Generated_Image_l91k8fl91k8fl91k.png" width="1024" height="1024" class="card-img">
+            <div class="card-content">
+                <h3>Encebollado Mixto</h3>
+                <p>La base clasica de albacora reforzada con camaran fresco.</p>
+                <span class="card-price">$7.50</span>
+                <button class="btn-add-menu" onClick="agregar('Encebollado Mixto', 7.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600" class="card-img">
+            <div class="card-content">
+                <h3>Cafe Pasado</h3>
+                <p>Cafe de pasada caliente, aromatico y recion hecho.</p>
+                <span class="card-price">$1.50</span>
+                <button class="btn-add-menu" onClick="agregar('Cafe Pasado', 1.50)">+</button>
+            </div>
+        </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.51.jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Cafe con Leche</h3>
+                <p>La mezcla tradicional con leche cremosa y espumosa.</p>
+                <span class="card-price">$2.00</span>
+                <button class="btn-add-menu" onClick="agregar('Cafe con Leche', 2.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.52 (3).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Chocolate Artesanal</h3>
+                <p>Chocolate puro de la zona con un toque de canela.</p>
+                <span class="card-price">$2.50</span>
+                <button class="btn-add-menu" onClick="agregar('Chocolate', 2.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.53 (2).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Iced Coffee</h3>
+                <p>Cafe frio refrescante con hielo y un toque de vainilla.</p>
+                <span class="card-price">$2.50</span>
+                <button class="btn-add-menu" onClick="agregar('Iced Coffee', 2.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.52 (4).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Capuchino</h3>
+                <p>Espresso con espuma de leche y canela espolvoreada.</p>
+                <span class="card-price">$3.00</span>
+                <button class="btn-add-menu" onClick="agregar('Capuchino', 3.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.53 (1).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Mocaccino</h3>
+                <p>Fusion perfecta de cafe, leche y chocolate oscuro.</p>
+                <span class="card-price">$3.50</span>
+                <button class="btn-add-menu" onClick="agregar('Mocaccino', 3.50)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.52 (2).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Te de Hierba Luisa</h3>
+                <p>Infusion natural caliente, ideal para la digestion.</p>
+                <span class="card-price">$1.25</span>
+                <button class="btn-add-menu" onClick="agregar('Te Hierba Luisa', 1.25)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.52 (1).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Jugo de Naranja</h3>
+                <p>100% fruta natural recion exprimida.</p>
+                <span class="card-price">$2.00</span>
+                <button class="btn-add-menu" onClick="agregar('Jugo Naranja', 2.00)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.51 (1).jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Limonada Imperial</h3>
+                <p>Refrescante limon con mucha espuma y hielo.</p>
+                <span class="card-price">$2.25</span>
+                <button class="btn-add-menu" onClick="agregar('Limonada', 2.25)">+</button>
+            </div>
+      </div>
+
+        <div class="card" data-cat="bebida">
+            <img src="../imagenes/WhatsApp Image 2026-04-03 at 19.19.52.jpeg" width="1280" height="1280" class="card-img">
+            <div class="card-content">
+                <h3>Frappe de Caf</h3>
+                <p>Cafe granizado con crema batida y chocolate.</p>
+                <span class="card-price">$4.00</span>
+                <button class="btn-add-menu" onClick="agregar('Frappe', 4.00)">+</button>
+            </div>
+      </div>
+
+    </div>
+</section>
+<section class="checkout-section" id="pago">
+    <div>
+        <h2 style="font-family: 'Playfair Display'; font-size: 2rem;">Finalizar Pedido</h2>
+        <div id="lista-carrito-vacia" style="text-align: center; padding: 40px; color: #999;">
+             Tu carrito esta vacio.
+        </div>
+        <div id="items-confirmacion"></div>
+    </div>
+
+    <div class="checkout-panel">
+        <h3 style="margin-top:0">Resumen</h3>
+        <div id="resumen-lista"></div>
+        <div style="display:flex; justify-content:space-between; font-weight:800; font-size:1.4rem; margin: 20px 0; border-top: 2px dashed #eee; padding-top:10px;">
+            <span>Total:</span>
+            <span id="txt-total" style="color: var(--secundario);">$0.00</span>
+        </div>
+
+        <form id="main-form" onSubmit="procesarPago(event)">
+            <div class="input-group">
+                <label>Nombre Completo</label>
+                <input type="text" id="nombre" required placeholder="Ej: Juan Perez">
+            </div>
+            <div class="input-group">
+                <label>Direccion de Entrega</label>
+                <input type="text" id="direccion" required placeholder="Calle y ciudad">
+            </div>
+
+            <label style="font-size: 0.8rem; font-weight: 700;">Metodo de Pago</label>
+            <div class="metodos-pago">
+                <div class="metodo-btn" id="m-efectivo" onClick="setMetodo('Efectivo')">💵 Efectivo</div>
+                <div class="metodo-btn" id="m-tarjeta" onClick="setMetodo('Tarjeta')">💳Tarjeta</div>
+            </div>
+
+            <div id="card-fields" style="display: none;">
+                <input type="text" id="n-tarjeta" maxlength="16" placeholder="Nmero de Tarjeta" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;">
+            </div>
+
+            <button type="submit" class="btn-finalizar" id="btn-pagar" disabled>CONFIRMAR PEDIDO</button>
+        </form>
+    </div>
+</section>
+
+<section class="contacto-seccion" id="contacto">
+    <h2>¿Prefieres pedir por redes?</h2>
+    <div class="botones-contacto">
+        <a href="tel:+593999999999" class="btn-red btn-llamar"><i class="fas fa-phone-alt"></i> Llamar</a>
+        <a href="https://wa.me/593999999999" class="btn-red btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://facebook.com/tuperfil" class="btn-red btn-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://instagram.com/tuperfil" class="btn-red btn-instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://tiktok.com/@tuperfil" class="btn-red btn-tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+    </div>
+</section>
+
+<div id="success-screen">
+    <h1 style="color: var(--exito); font-family: 'Playfair Display'; font-size: 3rem;">Pedido Recibido!</h1>
+    <div id="ticket" style="border: 2px solid #eee; padding: 25px; border-radius: 15px; width: 320px; background: #fff; margin: 20px 0;"></div>
+    <button onClick="location.reload()" class="cta-button">Hacer otro pedido</button>
+</div>
+
+<script>
+    let carrito = [];
+    let total = 0;
+    let metodoSeleccionado = "";
+
+    function filtrar(categoria, event) {
+        document.querySelectorAll('.cat-item').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.display = (categoria === 'todos' || card.dataset.cat === categoria) ? 'flex' : 'none';
+        });
+    }
+
+    function agregar(nombre, precio) {
+        carrito.push({nombre, precio});
+        total += precio;
+        actualizarInterfaz();
+    }
+
+    // --- NUEVA FUNCIÓN PARA ELIMINAR ---
+    function quitar(index) {
+        total -= carrito[index].precio;
+        carrito.splice(index, 1);
+        actualizarInterfaz();
+    }
+
+    function actualizarInterfaz() {
+        const resumen = document.getElementById('resumen-lista');
+        const listaVacia = document.getElementById('lista-carrito-vacia');
+        const itemsConfirm = document.getElementById('items-confirmacion');
+        
+        if(carrito.length > 0) {
+            listaVacia.style.display = 'none';
+            // Se agrega el botón con onclick="quitar(index)"
+            const htmlGenerado = carrito.map((item, index) => `
+                <div class="item-carrito" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span>${item.nombre}</span>
+                    <div>
+                        <span style="margin-right:10px;">$${item.precio.toFixed(2)}</span>
+                        <button type="button" onClick="quitar(${index})" style="background:#ff4d4d; color:white; border:none; border-radius:5px; cursor:pointer; padding:2px 8px;">Eliminar</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            resumen.innerHTML = htmlGenerado;
+            itemsConfirm.innerHTML = htmlGenerado;
+        } else {
+            listaVacia.style.display = 'block';
+            resumen.innerHTML = "";
+            itemsConfirm.innerHTML = "";
+        }
+        document.getElementById('txt-total').innerText = `$${total.toFixed(2)}`;
+        validarForm();
+    }
+
+    function setMetodo(metodo) {
+        metodoSeleccionado = metodo;
+        document.getElementById('m-efectivo').classList.remove('active');
+        document.getElementById('m-tarjeta').classList.remove('active');
+        document.getElementById('card-fields').style.display = (metodo === 'Tarjeta') ? 'block' : 'none';
+        document.getElementById('m-' + (metodo === 'Tarjeta' ? 'tarjeta' : 'efectivo')).classList.add('active');
+        validarForm();
+    }
+
+    function validarForm() {
+        const form = document.getElementById('main-form');
+        document.getElementById('btn-pagar').disabled = !(carrito.length > 0 && form.checkValidity() && metodoSeleccionado);
+    }
+
+    document.getElementById('main-form').addEventListener('input', validarForm);
+
+    function procesarPago(event) {
+        event.preventDefault();
+        const btn = document.getElementById('btn-pagar');
+        btn.innerText = "Procesando...";
+        setTimeout(() => {
+            document.getElementById('success-screen').style.display = 'flex';
+            generarTicket();
+        }, 1500);
+    }
+
+    function generarTicket() {
+        const ticket = document.getElementById('ticket');
+        ticket.innerHTML = `
+            <strong>EMPRENDEDORES</strong><br><hr>
+            <strong>Cliente:</strong> ${document.getElementById('nombre').value}<br>
+            <strong>Total:</strong> $${total.toFixed(2)}<br>
+            <strong>Pago:</strong> ${metodoSeleccionado}
+        `;
+    }
+</script>
+ 
+ 
+</body>
+<div style="background-color: #2c3e50; color: #ffffff; padding: 15px; text-align: center; font-family: Arial, sans-serif; font-size: 12px;">
+    &copy; 2026 <strong>Emprendedores en Acción</strong>. Todos los derechos reservados.
+</div>
+</html>
